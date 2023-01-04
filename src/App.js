@@ -1,7 +1,7 @@
 
 import './App.css';
 import Grid from './Grid'
-import Card from './Card'
+
 import  text  from './data.js'; // Relative path to your File
 
 console.log(text); 

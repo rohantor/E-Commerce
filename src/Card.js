@@ -1,16 +1,28 @@
 import React from 'react'
 
-export default function Card() {
+export default function Card(props) {
+    const {title,url,description,deleteStatus} = props.Product
   return (
     <div className='card_outer'>
-        <h3 className='title'>
-            Title
+        <div >
+             <h3 className='title' style={{display:"inline-block"}}>
+            {title}
+            
         </h3>
-
-        <img src='https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/I/812peq6sD8L._AC_UL600_SR600,400_.jpg'
+        <button  style={{display:"inline-block"}}>*</button>
+        </div>
+       
+        <img src={url}
         className='Card_img'/>
+        {
+            deleteStatus?( <button >
+            Delete
+        </button>)
+            :<></>
+        }
+       
         <p>
-            Description
+           {description}
         </p>
     </div>
   )

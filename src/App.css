@@ -52,7 +52,7 @@
   padding: 10px;
 }
 .card_outer {
-  height: 313px;
+  height: 358px;
   width: 317px;
   background-color: #fbd8d88a;
   border: -7px solid black;
@@ -62,6 +62,7 @@
 .title{
 
   align-self: center;
+  width:90%
 }
 .Card_img{
 

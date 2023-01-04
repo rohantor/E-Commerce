@@ -8,7 +8,12 @@ export default function Grid() {
         {text.map((item)=>{
 
 return(
-<Card/>
+<Card Product={{
+    "title":item.title,
+    "url":item.url,
+    "description":item.description,
+    "deleteStatus":true
+}}/>
   
 )
 
