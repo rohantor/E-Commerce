@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Grid from './Grid'
+import Card from './Card'
+import  text  from './data.js'; // Relative path to your File
+
+console.log(text); 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>E-Commerce Project </h1>
       </header>
+    <Grid/>
+   
+    
     </div>
   );
 }
