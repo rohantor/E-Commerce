@@ -1,7 +1,9 @@
 import React from 'react'
-
+import Button from '@mui/material/Button';
 export default function Card(props) {
-    const {title,url,description,deleteStatus} = props.Product
+    const {title,url,description} = props.Product;
+    const [deleteStatus , setDeletestatus]= React.useState(props.Product.deleteStatus)
+    
   return (
     <div className='card_outer'>
         <div >
@@ -9,16 +11,28 @@ export default function Card(props) {
             {title}
             
         </h3>
-        <button  style={{display:"inline-block"}}>*</button>
+        <button  style={{display:"inline-block"}}
+         onClick={()=>{
+
+            setDeletestatus(!deleteStatus)
+            console.log("Delete")
+
+        }}>*</button>
         </div>
        
         <img src={url}
         className='Card_img'/>
         {
-            deleteStatus?( <button >
+            deleteStatus?( <Button variant="outlined" color="error" >
             Delete
-        </button>)
-            :<></>
+        </Button >)
+            :<>
+            <Button variant="contained">
+            WishList
+        </Button>
+        <Button variant="outlined">
+            Add to cart
+        </Button></>
         }
        
         <p>

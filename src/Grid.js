@@ -12,7 +12,7 @@ return(
     "title":item.title,
     "url":item.url,
     "description":item.description,
-    "deleteStatus":true
+    "deleteStatus":false
 }}/>
   
 )
